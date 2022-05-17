@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <!--There is incompatibility issue with springfox 3.0.0 and Spring Boot 2.6.X versions so
+         had to use earlier version of Spring Boot-->
+        <version>2.5.13</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.valtech</groupId>
+    <artifactId>mach-2022-lorem-ipsum-api</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>mach-2022-lorem-ipsum-api</name>
+    <description>Project to hold our Lorem Ipsum API part</description>
+
+    <properties>
+        <java.version>11</java.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <spotbugs-maven-plugin.version>4.6.0.0</spotbugs-maven-plugin.version>
+        <spotbugs.version>4.7.0</spotbugs.version>
+        <springfox.version>3.0.0</springfox.version>
+        <spring-cloud.version>2020.0.5</spring-cloud.version>
+        <spring-boot-starter-cache.version>2.6.7</spring-boot-starter-cache.version>
+        <guava.version>31.1-jre</guava.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
+        <junit.version>5.9.0-M1</junit.version>
+        <lombok.version>1.18.22</lombok.version>
+        <log4j2.version>2.16.0</log4j2.version>
+        <azure-functions-java-library.version>1.4.2</azure-functions-java-library.version>
+        <function-app-name>mach-2022-lorem-ipsum-audit-func</function-app-name>
+        <azure-webapp-maven-plugin.version>2.4.0</azure-webapp-maven-plugin.version>
+        <azure.functions.maven.plugin.version>1.14.1</azure.functions.maven.plugin.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>${junit.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>${spotbugs-maven-plugin.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.github.spotbugs</groupId>
+                        <artifactId>spotbugs</artifactId>
+                        <version>${spotbugs.version}</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>execute-spotbugs</id>
+                        <phase>install</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!--
+            Uncomment below plugin in case you want to deploy Web App
+            -->
+            <!--            <plugin>-->
+            <!--                <groupId>com.microsoft.azure</groupId>-->
+            <!--                <artifactId>azure-webapp-maven-plugin</artifactId>-->
+            <!--                <version>${azure-webapp-maven-plugin.version}</version>-->
+            <!--                <configuration>-->
+            <!--                    <subscriptionId>{subscription-id}</subscriptionId>-->
+            <!--                    <appServicePlanResourceGroup>{app-service-plan-resource-group}</appServicePlanResourceGroup>-->
+            <!--                    <appServicePlanName>{app-service-plan-name}</appServicePlanName>-->
+            <!--                    <pricingTier>B1</pricingTier>-->
+            <!--                    <region>westeurope</region>-->
+            <!--                    <schemaVersion>V2</schemaVersion>-->
+            <!--                    &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
+            <!--                    <resourceGroup>${group-name}</resourceGroup>-->
+            <!--                    &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
+            <!--                    <appName>${app-name}</appName>-->
+            <!--                    <appSettings>-->
+            <!--                        <property>-->
+            <!--                            <name>JAVA_OPTS</name>-->
+            <!--                            <value>-Dserver.port=80</value>-->
+            <!--                        </property>-->
+            <!--                    </appSettings>-->
+            <!--                    <runtime>-->
+            <!--                        <os>linux</os>-->
+            <!--                        <javaVersion>Java 11</javaVersion>-->
+            <!--                        <webContainer>Java SE</webContainer>-->
+            <!--                    </runtime>-->
+            <!--                    <deployment>-->
+            <!--                        <resources>-->
+            <!--                            <resource>-->
+            <!--                                <directory>${project.basedir}/target</directory>-->
+            <!--                                <includes>-->
+            <!--                                    <include>*.jar</include>-->
+            <!--                                </includes>-->
+            <!--                            </resource>-->
+            <!--                        </resources>-->
+            <!--                    </deployment>-->
+            <!--                </configuration>-->
+            <!--            </plugin>-->
+
+            <!--
+            Uncomment below plugin in case you want to deploy functions
+            -->
+            <!--            <plugin>-->
+            <!--                <groupId>com.microsoft.azure</groupId>-->
+            <!--                <artifactId>azure-functions-maven-plugin</artifactId>-->
+            <!--                <version>${azure.functions.maven.plugin.version}</version>-->
+            <!--                <configuration>-->
+            <!--                    &lt;!&ndash; function app name &ndash;&gt;-->
+            <!--                    <appName>${function-app-name}</appName>-->
+            <!--                    &lt;!&ndash; function app resource group &ndash;&gt;-->
+            <!--                    <resourceGroup>{resource-group}</resourceGroup>-->
+            <!--                    &lt;!&ndash; function app service plan name &ndash;&gt;-->
+            <!--                    <appServicePlanName>{app-service-plan-name}</appServicePlanName>-->
+            <!--                    &lt;!&ndash; function app region&ndash;&gt;-->
+            <!--                    &lt;!&ndash; refers https://github.com/microsoft/azure-maven-plugins/wiki/Azure-Functions:-Configuration-Details#supported-regions for all valid values &ndash;&gt;-->
+            <!--                    <region>westus</region>-->
+            <!--                    &lt;!&ndash; function pricingTier, default to be consumption if not specified &ndash;&gt;-->
+            <!--                    &lt;!&ndash; refers https://github.com/microsoft/azure-maven-plugins/wiki/Azure-Functions:-Configuration-Details#supported-pricing-tiers for all valid values &ndash;&gt;-->
+            <!--                    &lt;!&ndash; <pricingTier></pricingTier> &ndash;&gt;-->
+            <!--                    &lt;!&ndash; Whether to disable application insights, default is false &ndash;&gt;-->
+            <!--                    &lt;!&ndash; refers https://github.com/microsoft/azure-maven-plugins/wiki/Azure-Functions:-Configuration-Details for all valid configurations for application insights&ndash;&gt;-->
+            <!--                    &lt;!&ndash; <disableAppInsights></disableAppInsights> &ndash;&gt;-->
+            <!--                    <runtime>-->
+            <!--                        &lt;!&ndash; runtime os, could be windows, linux or docker&ndash;&gt;-->
+            <!--                        <os>linux</os>-->
+            <!--                        <javaVersion>11</javaVersion>-->
+            <!--                    </runtime>-->
+            <!--                    <appSettings>-->
+            <!--                        <property>-->
+            <!--                            <name>FUNCTIONS_EXTENSION_VERSION</name>-->
+            <!--                            <value>~3</value>-->
+            <!--                        </property>-->
+            <!--                    </appSettings>-->
+            <!--                </configuration>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>package-functions</id>-->
+            <!--                        <goals>-->
+            <!--                            <goal>package</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jetty</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Swagger starter -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>${springfox.version}</version>
+        </dependency>
+
+        <!-- Microsoft Azure functions -->
+        <dependency>
+            <groupId>com.microsoft.azure.functions</groupId>
+            <artifactId>azure-functions-java-library</artifactId>
+            <version>${azure-functions-java-library.version}</version>
+        </dependency>
+
+        <!-- Utility dependencies -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
+
+        <!-- Testing dependencies -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Lombok dependency -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Spring Cache dependency -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+            <version>${spring-boot-starter-cache.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
