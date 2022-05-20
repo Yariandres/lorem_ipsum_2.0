@@ -4,7 +4,7 @@ import StageThree from "../stages/stageThree/StageThree";
 import StageFour from "../stages/stageFour/StageFour";
 import useFormProgress from "hooks/useFormProgress";
 
-const ContactForm = () => {
+const MultyStepForm = () => {
   const steps = [<StageOne />, <SatgeTwo />, <StageThree />, <StageFour />];
   const [currentStep, nextStep, prevStep] = useFormProgress();
 
@@ -19,7 +19,7 @@ const ContactForm = () => {
     <div className="container">
       {steps[currentStep]}
 
-      <div>
+      <div className="text-center mt-5">
         {!isFirst && (
           <button className="btn btn-warning" onClick={() => prevStep()}>
             PREVIOUS
@@ -29,6 +29,7 @@ const ContactForm = () => {
           type="submit"
           className={`btn btn-${isLast ? "primary" : "success"}`}
           onClick={(e) => {
+            //   REFACTOR: outsource this logic to a function
             e.preventDefault();
             if (isLast) {
               handleSubmit();
@@ -44,4 +45,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default MultyStepForm;

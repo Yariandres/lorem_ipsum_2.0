@@ -1,6 +1,7 @@
 // import { useState, useEffect } from "react";
 // import useContentful from "hooks/useContentful";
-import ContactForm from "components/contactForm/ContactForm";
+import MultyStepForm from "components/multyStepForm/MultyStepForm";
+import { StepFormProvider } from "context/FormState";
 
 const App = () => {
   // const [content, setContent] = useState([]);
@@ -12,9 +13,9 @@ const App = () => {
   // }, []);
 
   return (
-    <div>
-      <ContactForm />
-    </div>
+    <StepFormProvider>
+      <MultyStepForm />
+    </StepFormProvider>
   );
 };
 
