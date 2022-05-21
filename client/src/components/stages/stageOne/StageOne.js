@@ -1,56 +1,38 @@
+import { useState, useEffect, useContext } from "react";
+import useContentful from "hooks/useContentful";
+import { StepFormContext } from "context/FormState";
+import CardItem from "./CardItem";
 import "./stageOne.scss";
+
 const StageOne = () => {
+  const [content, setContent] = useState([]);
+  const [platform, setPlatform] = useState("");
+
+  const { getContent } = useContentful();
+  const { setVendorPlatform } = useContext(StepFormContext);
+
+  useEffect(() => {
+    getContent().then((data) => setContent(data));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleOptionChange = (e) => {
+    const { value } = e.target;
+    setPlatform(value);
+    setVendorPlatform(value);
+  };
+
   return (
-    <div className="mt-5">
-      <div className="row align-items-center">
-        <div class="col-md-6">
-          <div class="checkbox-card">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="checkbox-card">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="checkbox-card">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="checkbox-card">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
-        </div>
+    <div className="card-image-container">
+      <h1 className="display-5">Step - 1 Select Platform: {platform}</h1>
+      <div className="row gy-4">
+        {content.map((item, index) => (
+          <CardItem
+            item={item}
+            index={index}
+            handleOptionChange={handleOptionChange}
+          />
+        ))}
       </div>
     </div>
   );
