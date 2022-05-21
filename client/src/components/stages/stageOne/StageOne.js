@@ -1,4 +1,40 @@
+import { useState, useEffect, useContext } from "react";
+import useContentful from "hooks/useContentful";
+import { StepFormContext } from "context/FormState";
+import CardItem from "./CardItem";
+import "./stageOne.scss";
+
 const StageOne = () => {
-  return <h1>Stage one</h1>;
+  const [content, setContent] = useState([]);
+  const [platform, setPlatform] = useState("");
+
+  const { getContent } = useContentful();
+  const { setVendorPlatform } = useContext(StepFormContext);
+
+  useEffect(() => {
+    getContent().then((data) => setContent(data));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleOptionChange = (e) => {
+    const { value } = e.target;
+    setPlatform(value);
+    setVendorPlatform(value);
+  };
+
+  return (
+    <div className="card-image-container">
+      <h1 className="display-5">Step - 1 Select Platform: {platform}</h1>
+      <div className="row gy-4">
+        {content.map((item, index) => (
+          <CardItem
+            item={item}
+            index={index}
+            handleOptionChange={handleOptionChange}
+          />
+        ))}
+      </div>
+    </div>
+  );
 };
 export default StageOne;
