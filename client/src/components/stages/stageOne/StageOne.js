@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import useContentful from "hooks/useContentful";
 import { StepFormContext } from "context/FormState";
-import CardItem from "./CardItem";
+import CardItem from "../../cardItem/CardItem";
 import "./stageOne.scss";
 
 const StageOne = () => {
@@ -28,10 +28,17 @@ const StageOne = () => {
       <div className="row gy-4">
         {content.map((item, index) => (
           <CardItem
-            item={item}
+            key={item.image.sys.id}
+            item={item.name}
             index={index}
             handleOptionChange={handleOptionChange}
-          />
+          >
+            <img
+              className="vendor-img img-fluid"
+              src={item.image.fields.file.url}
+              alt={item.name}
+            />
+          </CardItem>
         ))}
       </div>
     </div>
