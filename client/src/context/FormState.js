@@ -23,9 +23,22 @@ export const StepFormProvider = function ({ children }) {
     dispatch({ type: "SET_SERVICE", payload: serv });
   };
 
+  const setClientIDNumber = (num) => {
+    dispatch({ type: "SET_CLIENT_ID", payload: num });
+  };
+  const setClientSecretNumber = (num) => {
+    dispatch({ type: "SET_CLIENT_SECRET", payload: num });
+  };
+
   return (
     <StepFormContext.Provider
-      value={{ state, setVendorPlatform, setServiceDelivery }}
+      value={{
+        state,
+        setVendorPlatform,
+        setServiceDelivery,
+        setClientIDNumber,
+        setClientSecretNumber,
+      }}
     >
       {children}
     </StepFormContext.Provider>
