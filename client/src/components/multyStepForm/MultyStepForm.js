@@ -20,10 +20,10 @@ const MultyStepForm = () => {
   return (
     <div>
       <div className="container form-step-container">{steps[currentStep]}</div>
-
-      <div className="text-center">
+      <div className="d-flex justify-content-center">
+        {/* TODO: disable button if nothing has been checked */}
         {!isFirst && (
-          <button className="btn btn-warning" onClick={() => prevStep()}>
+          <button className="btn btn-warning btn-lg" onClick={() => prevStep()}>
             PREVIOUS
           </button>
         )}

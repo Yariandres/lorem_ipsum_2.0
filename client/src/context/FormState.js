@@ -15,12 +15,18 @@ const formInitialState = {
 export const StepFormProvider = function ({ children }) {
   const [state, dispatch] = useReducer(FormReducer, formInitialState);
 
-  const setVendorPlatform = (platform) => {
-    dispatch({ type: "SET_PLATFORM", payload: platform });
+  const setVendorPlatform = (plat) => {
+    dispatch({ type: "SET_PLATFORM", payload: plat });
+  };
+
+  const setServiceDelivery = (serv) => {
+    dispatch({ type: "SET_SERVICE", payload: serv });
   };
 
   return (
-    <StepFormContext.Provider value={{ state, setVendorPlatform }}>
+    <StepFormContext.Provider
+      value={{ state, setVendorPlatform, setServiceDelivery }}
+    >
       {children}
     </StepFormContext.Provider>
   );

@@ -2,6 +2,17 @@
   $primary-color: #3057d5;
   $transition: 200ms linear;
 
+  .card-text {
+    line-height: 1.3;
+    color: #1f2949;
+    text-align: center;
+  }
+
+  .vendor-img {
+    width: 40%;
+    height: auto;
+  }
+
   label,
   input {
     cursor: pointer;

@@ -28,6 +28,7 @@ const StageOne = () => {
       <div className="row gy-4">
         {content.map((item, index) => (
           <CardItem
+            key={item.image.sys.id}
             item={item}
             index={index}
             handleOptionChange={handleOptionChange}

@@ -15,9 +15,9 @@ const CardItem = ({ item, index, handleOptionChange }) => {
             />
             <div className="card-content-wrapper">
               <span className="check-icon"></span>
-              <div className="card-content">
+              <div className="card-content d-flex justify-content-center">
                 <img
-                  className="img-fluid"
+                  className="vendor-img img-fluid"
                   src={item.image.fields.file.url}
                   alt={item.name}
                 />
