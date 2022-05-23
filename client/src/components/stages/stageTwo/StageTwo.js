@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 // import useContentful from "hooks/useContentful";
 import { StepFormContext } from "context/FormState";
-import CardItem from "../../cardItem/CardItem";
+import CardItem from "../../CardItem";
 
 const StageTwo = () => {
   const [service, setService] = useState(null);

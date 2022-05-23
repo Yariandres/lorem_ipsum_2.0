@@ -25,7 +25,7 @@ const StageThree = () => {
         Put your secret here
       </div>
       <div className="mt-5">
-        <label for="clientID" className="form-label">
+        <label htmlFor="clientID" className="form-label">
           Client IDS
         </label>
         <input
@@ -38,7 +38,7 @@ const StageThree = () => {
         />
       </div>
       <div className="mt-4 mb-5">
-        <label for="clientSecret" className="form-label">
+        <label htmlFor="clientSecret" className="form-label">
           Client Secret
         </label>
         <input
