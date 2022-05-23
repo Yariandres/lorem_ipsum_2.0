@@ -1,0 +1,14 @@
+.card {
+  border-radius: 1rem !important;
+  width: 50%;
+}
+
+.application-items {
+  width: 50%;
+  li {
+    cursor: pointer;
+    &:hover {
+      background: #f2f7fc;
+    }
+  }
+}

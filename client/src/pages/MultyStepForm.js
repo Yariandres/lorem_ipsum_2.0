@@ -1,13 +1,10 @@
-import StageOne from "../stages/stageOne/StageOne";
-import SatgeTwo from "../stages/stageTwo/StageTwo";
-import StageThree from "../stages/stageThree/StageThree";
-import StageFour from "../stages/stageFour/StageFour";
+import StageOne from "../components/stages/stageOne/StageOne";
+import SatgeTwo from "../components/stages/stageTwo/StageTwo";
+import StageThree from "../components/stages/stageThree/StageThree";
 import useFormProgress from "hooks/useFormProgress";
 
-import "./multyStepForm.scss";
-
 const MultyStepForm = () => {
-  const steps = [<StageOne />, <SatgeTwo />, <StageThree />, <StageFour />];
+  const steps = [<StageOne />, <SatgeTwo />, <StageThree />];
   const [currentStep, nextStep, prevStep] = useFormProgress();
 
   const isFirst = currentStep === 0;
@@ -27,6 +24,7 @@ const MultyStepForm = () => {
             PREVIOUS
           </button>
         )}
+
         <button
           type="submit"
           className={`btn btn-${isLast ? "primary" : "success"} btn-lg`}
@@ -43,6 +41,7 @@ const MultyStepForm = () => {
           {isLast ? "SUBMIT" : "NEXT"}
         </button>
       </div>
+      {isLast}
     </div>
   );
 };
