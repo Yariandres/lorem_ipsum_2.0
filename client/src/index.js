@@ -4,7 +4,6 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-// imports custom bootstrap css for overides
 // import "./custom.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

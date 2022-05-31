@@ -6,6 +6,7 @@ import ModalContent from "./ModalContent";
 
 const ImagesPreview = ({ prevStep }) => {
   const [projectName, setProjectName] = useState("");
+
   return (
     <div className="dashboard_container">
       <div className="mx-auto logo_container">
