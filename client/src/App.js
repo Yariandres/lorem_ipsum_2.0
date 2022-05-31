@@ -1,7 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import MultyStepForm from "./pages/MultyStepForm";
-import StageThree from "./components/stages/stageThree/StageThree";
 import { StepFormProvider } from "context/FormState";
 import "./sass/main.scss";
 
