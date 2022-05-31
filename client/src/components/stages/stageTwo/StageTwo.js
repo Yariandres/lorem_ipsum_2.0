@@ -1,39 +1,138 @@
 import { useState, useContext } from "react";
-// import useContentful from "hooks/useContentful";
+import LoremSvg from "../../../assets/svg/LoremLogo.js";
+
 import { StepFormContext } from "context/FormState";
-import CardItem from "../../CardItem";
 
-const StageTwo = () => {
-  const [service, setService] = useState(null);
+const StageTwo = ({ nextStep }) => {
+  const [submitted, setSubmitted] = useState(false);
+  const [values, setValues] = useState({
+    clientId: "",
+    password: "",
+    projectName: "",
+  });
 
-  const { setServiceDelivery } = useContext(StepFormContext);
+  const { setClientIDNumber, setClientPassword, setProjectName } =
+    useContext(StepFormContext);
 
-  const data = [
-    "Text-to-image Generation",
-    "Content Translation",
-    "Option 3",
-    "Option 4",
-  ];
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setClientIDNumber(e.target.value);
+    setClientPassword(e.target.value);
+    setSubmitted(true);
+    nextStep("categories");
+  };
 
-  const handleOptionChange = (e) => {
-    const { value } = e.target;
-    setService(value);
-    setServiceDelivery(value);
+  const handleClientIdInputChange = (e) => {
+    e.persist();
+    setValues({ ...values, clientId: e.target.value });
+  };
+
+  const handlePasswordInputChange = (e) => {
+    e.persist();
+    setValues({ ...values, password: e.target.value });
+  };
+
+  const handleProjectInputChange = (e) => {
+    e.persist();
+    setValues({ ...values, projectName: e.target.value });
   };
 
   return (
-    <div className="row mx-auto">
-      <h1 className="display-5">Step - 2 Select Service: {service} </h1>
-      {data.map((item, index) => (
-        <CardItem
-          key={index}
-          item={item}
-          index={index}
-          handleOptionChange={handleOptionChange}
-        >
-          <h2 className="card-text text-center">{item}</h2>
-        </CardItem>
-      ))}
+    <div>
+      <section className="logo_hero_section_two text-center">
+        <LoremSvg fill="white" />
+        <h5 className="logo_text">Lorem Ipsum</h5>
+      </section>
+
+      <section className="form_container mx-auto">
+        <div className="form_card">
+          <h2 className="text-center">Personal information</h2>
+          <p className="card_small_text">Please write your credantials here </p>
+          <form onSubmit={handleSubmit}>
+            <div className="mb-3 input-group-lg custom_imput">
+              <label htmlFor="clientId" className="form-label label_text">
+                Client id
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="clientId"
+                aria-describedby="emailHelp"
+                value={values.clientId}
+                onChange={(e) => {
+                  setClientIDNumber(e.target.value);
+                  handleClientIdInputChange(e);
+                }}
+              />
+              {submitted && !values.clientId && (
+                <div id="clientId" className="form-text text-danger">
+                  Please enter your client id
+                </div>
+              )}
+            </div>
+
+            <div className="mb-3 input-group-lg custom_imput">
+              <label htmlFor="clientPassword" className="form-label label_text">
+                Password
+              </label>
+              <input
+                type="password"
+                className="form-control"
+                id="clientPassword"
+                value={values.password}
+                onChange={(e) => {
+                  setClientPassword(e.target.value);
+                  handlePasswordInputChange(e);
+                }}
+              />
+              {submitted && !values.password && (
+                <div id="clientPassword" className="form-text text-danger">
+                  Please enter your password
+                </div>
+              )}
+            </div>
+
+            <div className="mb-3 input-group-lg custom_imput">
+              <label htmlFor="project" className="form-label label_text">
+                Project
+              </label>
+
+              <input
+                className="form-control"
+                aria-label="Default select example"
+                placeholder="Project name"
+                id="project"
+                onChange={(e) => {
+                  setProjectName(e.target.value);
+                  handleProjectInputChange(e);
+                }}
+              />
+
+              {submitted && !values.projectName && (
+                <div id="project" className="form-text text-danger">
+                  please select your project
+                </div>
+              )}
+            </div>
+
+            <div className="text-center button_container">
+              <button
+                type="submit"
+                className="btn btn-primary form_button"
+                disabled={
+                  values.clientId && values.password && values.projectName
+                    ? false
+                    : true
+                }
+              >
+                Connect
+              </button>
+            </div>
+
+            {submitted && <div className="text-success">Success!</div>}
+          </form>
+        </div>
+      </section>
     </div>
   );
 };

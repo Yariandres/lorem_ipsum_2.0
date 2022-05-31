@@ -1,28 +1,24 @@
 import { Route, Switch } from "react-router-dom";
-import NavBar from "components/NavBar";
 import Dashboard from "./pages/Dashboard";
 import MultyStepForm from "./pages/MultyStepForm";
+import StageThree from "./components/stages/stageThree/StageThree";
 import { StepFormProvider } from "context/FormState";
-
 import "./sass/main.scss";
 
 const App = () => {
   return (
-    <div>
-      <NavBar />
-      <main>
-        <StepFormProvider>
-          <Switch>
-            <Route path="/" exact>
-              <Dashboard />
-            </Route>
-            <Route path="/form">
-              <MultyStepForm />
-            </Route>
-          </Switch>
-        </StepFormProvider>
-      </main>
-    </div>
+    <main>
+      <StepFormProvider>
+        <Switch>
+          <Route path="/" exact>
+            <MultyStepForm />
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard />
+          </Route>
+        </Switch>
+      </StepFormProvider>
+    </main>
   );
 };
 

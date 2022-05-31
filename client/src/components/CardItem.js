@@ -1,16 +1,21 @@
-const CardItem = ({ item, index, handleOptionChange, children }) => {
+import { useContext } from "react";
+import { StepFormContext } from "context/FormState";
+
+const CardItem = ({ title, index, children }) => {
+  const { setVendorPlatform } = useContext(StepFormContext);
+
   return (
-    <div className="col-sm-12 col-md-6">
-      <div className={`checkbox-card`}>
+    <div className="col-sm-12 col-md-3">
+      <div className="checkbox-card">
         <div className="form-check d-flex justify-content-center align-items-center">
           <label htmlFor={`flexRadioDefault${index}`} className="radio-card">
             <input
               type="radio"
-              value={item}
+              value={title}
               name="radio-card"
               id={`flexRadioDefault${index}`}
               onChange={(e) => {
-                handleOptionChange(e);
+                setVendorPlatform(e.target.value);
               }}
             />
             <div className="card-content-wrapper">

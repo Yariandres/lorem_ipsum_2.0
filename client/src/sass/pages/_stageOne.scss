@@ -1,0 +1,154 @@
+.logo_hero_section {
+  background: linear-gradient(180deg, #619e70 -36.68%, #81d07a 100%);
+  color: #fff;
+  padding: 2rem 0 19.2rem 0;
+
+  .logo_text {
+    margin-top: 1.1rem;
+  }
+
+  .hero_section {
+    width: 60.8rem;
+    margin-top: 8.6rem;
+
+    .hero_heading {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 3.6rem;
+      line-height: 4rem;
+    }
+  }
+
+  .hero_sub_heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin-top: 1.6rem;
+  }
+}
+
+.card_group_section {
+  margin-top: -9.5rem;
+}
+
+.checkbox-card {
+  $primary-color: #619e70;
+  $transition: 200ms linear;
+
+  .card-text {
+    line-height: 1.3;
+    color: #1f2949;
+    text-align: center;
+  }
+
+  .vendor-img {
+    margin: 6rem 3.2rem;
+  }
+
+  label,
+  input {
+    cursor: pointer;
+  }
+
+  label.radio-card {
+    cursor: pointer;
+    width: 100%;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    .card-content-wrapper {
+      background: #ffffff;
+      border-radius: 6px;
+      transition: $transition;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
+
+      // &:hover {
+      //   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), 0px 0px 0px 1px #619e70;
+      // }
+    }
+
+    // .check-icon {
+    // width: 20px;
+    // height: 20px;
+    // display: inline-block;
+    // border: solid 2px #e3e3e3;
+    // border-radius: 50%;
+    // transition: $transition;
+    // position: relative;
+
+    // &:before {
+    //   content: "";
+    //   position: absolute;
+    //   inset: 0;
+    //   background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.93552 4.58423C0.890286 4.53718 0.854262 4.48209 0.829309 4.42179C0.779553 4.28741 0.779553 4.13965 0.829309 4.00527C0.853759 3.94471 0.889842 3.88952 0.93552 3.84283L1.68941 3.12018C1.73378 3.06821 1.7893 3.02692 1.85185 2.99939C1.91206 2.97215 1.97736 2.95796 2.04345 2.95774C2.11507 2.95635 2.18613 2.97056 2.2517 2.99939C2.31652 3.02822 2.3752 3.06922 2.42456 3.12018L4.69872 5.39851L9.58026 0.516971C9.62828 0.466328 9.68554 0.42533 9.74895 0.396182C9.81468 0.367844 9.88563 0.353653 9.95721 0.354531C10.0244 0.354903 10.0907 0.369582 10.1517 0.397592C10.2128 0.425602 10.2672 0.466298 10.3112 0.516971L11.0651 1.25003C11.1108 1.29672 11.1469 1.35191 11.1713 1.41247C11.2211 1.54686 11.2211 1.69461 11.1713 1.82899C11.1464 1.88929 11.1104 1.94439 11.0651 1.99143L5.06525 7.96007C5.02054 8.0122 4.96514 8.0541 4.90281 8.08294C4.76944 8.13802 4.61967 8.13802 4.4863 8.08294C4.42397 8.0541 4.36857 8.0122 4.32386 7.96007L0.93552 4.58423Z' fill='white'/%3E%3C/svg%3E%0A");
+    //   background-repeat: no-repeat;
+    //   background-size: 12px;
+    //   background-position: center center;
+    //   transform: scale(1.6);
+    //   transition: $transition;
+    //   opacity: 0;
+    // }
+    // }
+
+    input[type="radio"] {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      // opacity: 0;
+      // cursor: pointer;
+      // height: 0;
+      // width: 0;
+
+      &:checked {
+        + .card-content-wrapper {
+          box-shadow: 0 2px 4px 0 rgba(219, 215, 215, 0.5),
+            0 0 0 2px $primary-color;
+
+          // .check-icon {
+          //   background: $primary-color;
+          //   border-color: $primary-color;
+          //   transform: scale(1.2);
+          //   &:before {
+          //     transform: scale(1);
+          //     opacity: 1;
+          //   }
+          // }
+        }
+      }
+
+      // &:focus {
+      //   + .card-content-wrapper {
+      //     .check-icon {
+      //       // box-shadow: 0 0 0 4px rgba(48, 86, 213, 0.2);
+      //     }
+      //   }
+      // }
+    }
+  }
+}
+
+.form-container {
+  background-color: #fff;
+  width: 50%;
+  border-radius: 1rem !important;
+}
+
+.form_button {
+  font-weight: 500 !important;
+  font-size: 1.6rem !important;
+  line-height: 2.4rem !important;
+  background-color: #619e70 !important;
+  border: none !important;
+  padding: 0.9rem 11.8rem !important;
+}
+
+.form_proceed_button {
+  margin-top: 6.1rem;
+}

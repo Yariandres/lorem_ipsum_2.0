@@ -1,0 +1,54 @@
+.logo_hero_section_three {
+  margin-top: 3rem;
+  margin-bottom: 4.8rem;
+
+  .dashboard_group {
+    position: absolute;
+    right: 16.5rem;
+    top: 5.1rem;
+
+    svg {
+      margin: 1rem;
+    }
+
+    .dashboard_button {
+      border: none;
+      background-color: transparent;
+
+      .dashboard_text {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.7rem;
+        line-height: 3rem;
+      }
+    }
+  }
+
+  .hero_section {
+    margin-top: 2.9rem;
+  }
+
+  .hero_sub_heading {
+    margin-top: 0.4rem;
+  }
+
+  .dashboard_link {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 3rem;
+    color: #000000;
+  }
+}
+
+.card-content-wrapper {
+  position: relative;
+
+  .card_text {
+    position: absolute;
+    bottom: -1.5rem;
+    left: 5.5rem;
+    width: 6rem;
+    height: 5.6rem;
+  }
+}

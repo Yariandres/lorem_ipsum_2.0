@@ -2,5 +2,11 @@
 @import "./abstract/resets";
 
 // COMPONENTS
-@import "./components/multyStepForm";
 @import "./components/dashboard";
+@import "./components/logoItem";
+
+// PAGES
+@import "./pages/multyStepForm";
+@import "./pages/stageOne.scss";
+@import "./pages/stageTwo.scss";
+@import "./pages/stageThree.scss";

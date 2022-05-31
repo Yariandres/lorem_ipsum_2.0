@@ -1,49 +1,65 @@
+import { useState, useContext, useEffect } from "react";
+import useContentful from "hooks/useContentful";
+
 import StageOne from "../components/stages/stageOne/StageOne";
 import SatgeTwo from "../components/stages/stageTwo/StageTwo";
 import StageThree from "../components/stages/stageThree/StageThree";
-import useFormProgress from "hooks/useFormProgress";
+import Dashboard from "./Dashboard";
+import ImagesPreview from "../components/ImagesPreview";
+import { StepFormContext } from "../context/FormState";
 
 const MultyStepForm = () => {
-  const steps = [<StageOne />, <SatgeTwo />, <StageThree />];
-  const [currentStep, nextStep, prevStep] = useFormProgress();
+  const [content, setContent] = useState([]);
+  const { state, setNextStep, setPrevStep } = useContext(StepFormContext);
+  const { step } = state;
 
-  const isFirst = currentStep === 0;
-  const isLast = currentStep === steps.length - 1;
+  const { getContent } = useContentful();
 
-  const handleSubmit = (e) => {
-    // TODO: Dispatch action here
+  useEffect(() => {
+    getContent().then((data) => setContent(data));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const filteredPlatform = content.filter((item) => {
+    return item.name !== undefined;
+  });
+
+  const filteredCategories = content.filter((item) => {
+    return item.name === undefined;
+  });
+
+  const nextStep = (stp) => {
+    setNextStep(stp);
   };
 
-  return (
-    <div>
-      <div className="container form-step-container">{steps[currentStep]}</div>
-      <div className="d-flex justify-content-center">
-        {/* TODO: disable button if nothing has been checked */}
-        {!isFirst && (
-          <button className="btn btn-warning btn-lg" onClick={() => prevStep()}>
-            PREVIOUS
-          </button>
-        )}
+  const prevStep = (stp) => {
+    setPrevStep(stp);
+  };
 
-        <button
-          type="submit"
-          className={`btn btn-${isLast ? "primary" : "success"} btn-lg`}
-          onClick={(e) => {
-            //   REFACTOR: outsource this logic to a function
-            e.preventDefault();
-            if (isLast) {
-              handleSubmit();
-            } else {
-              nextStep();
-            }
-          }}
-        >
-          {isLast ? "SUBMIT" : "NEXT"}
-        </button>
-      </div>
-      {isLast}
-    </div>
-  );
+  switch (step) {
+    case "platform":
+      return (
+        <StageOne nextStep={nextStep} filteredPlatform={filteredPlatform} />
+      );
+
+    case "credentials":
+      return <SatgeTwo nextStep={nextStep} />;
+
+    case "categories":
+      return (
+        <StageThree
+          nextStep={nextStep}
+          filteredCategories={filteredCategories}
+        />
+      );
+
+    case "dashboard":
+      return <Dashboard prevStep={prevStep} />;
+
+    case "images":
+      return <ImagesPreview prevStep={prevStep} />;
+    default:
+  }
 };
 
 export default MultyStepForm;

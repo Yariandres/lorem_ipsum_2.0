@@ -1,30 +1,55 @@
-import { Link } from "react-router-dom";
-import HeadingSvg from "../assets/svg/HeadingSvg";
+import LogoItem from "../components/LogoItem";
+import ArrowLeft from "assets/svg/ArrowLeft";
+import ArrowLink from "assets/svg/ArrowLink";
 
-const Dashboard = () => {
+const Dashboard = ({ prevStep }) => {
   return (
-    <div className="container mt-5">
-      <div className="card p-4">
-        <div className="card-body">
-          <div className="mb-5">
-            <HeadingSvg size="70" fill="#0d6efd" />
-            <p className="mt-4 lead"> John Doe </p>
-          </div>
-          <div>
-            <Link to="/form">
-              <button className="btn btn-primary btn-lg">Create new app</button>
-            </Link>
-          </div>
-        </div>
+    <div className="container dashboard_container">
+      <div className="mx-auto logo_container">
+        <LogoItem fill="#619e70" />
       </div>
 
-      <div className="application-items mt-5">
-        <h2>Saved App Items </h2>
-        <ul className="list-group">
-          <li className="list-group-item p-3 my-1">Commerce tools snipets</li>
-          <li className="list-group-item p-3 my-1">Sales force translations</li>
-          <li className="list-group-item p-3 my-1">Magento descriptions</li>
-        </ul>
+      <button
+        className="back_button d-flex"
+        onClick={() => prevStep("categories")}
+      >
+        <ArrowLeft />
+        Back to choose category
+      </button>
+
+      <h2 className="draft_text">My draft</h2>
+
+      <div className="row">
+        <div className="col-sm-12 col-md-6">
+          <div className="draft_item">
+            <div className="draft_item_header d-flex justify-content-between">
+              <img src="https://via.placeholder.com/48" alt="item" />
+              <span role="button">
+                <ArrowLink />
+              </span>
+            </div>
+
+            <div className="draft_item_footer">
+              <p className="category_desc">Clothing (Zara products)</p>
+              <p className="text_category">Images</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-sm-12 col-md-6">
+          <div className="draft_item">
+            <div className="draft_item_header d-flex justify-content-between">
+              <img src="https://via.placeholder.com/48" alt="item" />
+              <span role="button">
+                <ArrowLink />
+              </span>
+            </div>
+
+            <div className="draft_item_footer">
+              <p className="category_desc">Clothing (Zara products)</p>
+              <p className="text_category">Images</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

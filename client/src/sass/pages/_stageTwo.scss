@@ -1,0 +1,58 @@
+.logo_hero_section_two {
+  background: linear-gradient(180deg, #619e70 -36.68%, #81d07a 100%);
+  color: #fff;
+  padding: 2rem 0 34.9rem 0;
+
+  .logo_text {
+    margin-top: 1.1rem;
+  }
+}
+
+.form_container {
+  margin-top: -33rem;
+  width: 92rem;
+  background-color: #fff;
+
+  .form_card {
+    padding: 6.5rem 20.8rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
+
+    .custom_imput {
+      border-radius: 0.6rem !important;
+    }
+  }
+
+  .card_small_text {
+    font-style: normal !important;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #6b7280;
+  }
+
+  .label_text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    /* gray/700 */
+
+    color: #374151;
+  }
+
+  .form_button {
+    font-weight: 500 !important;
+    font-size: 1.6rem !important;
+    line-height: 2.4rem !important;
+    background-color: #619e70 !important;
+    border: none !important;
+    padding: 0.9rem 11.8rem !important;
+  }
+
+  .button_container {
+    margin-top: 3rem;
+  }
+}

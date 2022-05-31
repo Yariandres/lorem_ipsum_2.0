@@ -1,37 +1,48 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default (state, action) => {
   switch (action.type) {
+    case "SET_NEXT_STEP":
+      return {
+        ...state,
+        step: action.payload,
+      };
+
+    case "SET_PREV_STEP":
+      return {
+        ...state,
+        step: action.payload,
+      };
+
     case "SET_PLATFORM":
       return {
         ...state,
         platform: action.payload,
       };
-    case "SET_SERVICE":
-      return {
-        ...state,
-        service: action.payload,
-      };
+
     case "SET_CLIENT_ID":
       return {
         ...state,
         clientID: action.payload,
       };
-    case "SET_CLIENT_SECRET":
+
+    case "SET_PASSWORD":
       return {
         ...state,
-        clientSecret: action.payload,
+        password: action.payload,
       };
-    case "SET_SUBMIT_IN_PROGRESS":
+
+    case "SET_PROJECT_NAME":
       return {
         ...state,
-        isSubmitInProgress: true,
+        service: action.payload,
       };
-    case "SET_SUBMIT_SUCCESS":
+
+    case "SET_CATEGORY":
       return {
         ...state,
-        isSubmitSuccess: false,
-        isSubmissionRecieved: true,
+        category: action.payload,
       };
+
     default:
       return state;
   }

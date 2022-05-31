@@ -1,14 +1,162 @@
-.card {
-  border-radius: 1rem !important;
-  width: 50%;
-}
+.dashboard_container {
+  .logo_container {
+    margin-top: 3rem;
+  }
 
-.application-items {
-  width: 50%;
-  li {
-    cursor: pointer;
-    &:hover {
-      background: #f2f7fc;
+  .preview_hero_section {
+    margin-bottom: 3rem;
+
+    .hero_primary_text {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2.8rem;
+      line-height: 3.4rem;
+    }
+
+    .hero_secondary_text {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #6b7280;
+    }
+  }
+
+  .back_button {
+    border: none;
+    background-color: transparent;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #619e70;
+    margin: 2.4rem 0 1.5rem 0;
+  }
+
+  .images_container {
+    max-height: calc(100vh - 360px);
+    overflow-y: scroll;
+    padding: 2.6rem 0;
+  }
+
+  .footer_container {
+    background-color: transparent;
+
+    p {
+      margin: 3.7rem 0 2.7rem 0;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 2rem;
+
+      color: #6b7280;
+    }
+
+    .footer_buttons {
+      width: 17.5rem;
+    }
+  }
+
+  .modal {
+    .modal-dialog {
+      .modal-content {
+        padding: 2rem 1.6rem 1.6rem 1.6rem !important;
+        border-radius: 0.8rem;
+
+        .modal_header {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+          color: #111827;
+          margin-top: 1.2rem;
+        }
+
+        .modal_sub_header {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.4rem;
+          line-height: 2rem;
+          color: #6b7280;
+          margin: 0.8rem 0 2rem 0;
+        }
+
+        button,
+        input {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          border-radius: 0.6rem;
+        }
+
+        input {
+          color: #6b7280;
+        }
+      }
+    }
+  }
+
+  .card_items {
+    li:not(:first-child) {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .list_group {
+      margin-top: 1rem;
+      padding-left: 1rem;
+    }
+
+    .image_heading_primary {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      color: #111827;
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  .draft_text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+    margin-bottom: 4.8rem;
+  }
+
+  .draft_item {
+    background: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
+    border-radius: 0.4rem;
+    padding: 2.4rem;
+
+    .draft_item_header {
+      margin-bottom: 3.2rem;
+    }
+
+    .draft_item_footer {
+      .category_desc {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+      }
+
+      .text_category {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        color: #6b7280;
+      }
     }
   }
 }
