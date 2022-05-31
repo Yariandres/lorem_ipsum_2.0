@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 // imports custom bootstrap css for overides
-import "./custom.scss";
+// import "./custom.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
