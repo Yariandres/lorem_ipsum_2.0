@@ -10,7 +10,7 @@ const StageTwo = ({ nextStep }) => {
   const [values, setValues] = useState({
     clientId: "clientid",
     password: "password",
-    projectName: "",
+    projectName: "My Project",
   });
 
   const { setClientIdNumber, setClientPassword, setProjectName } =
@@ -46,18 +46,18 @@ const StageTwo = ({ nextStep }) => {
   if (isAuthenticated) {
     return (
       <section className="loading_container d-flex justify-content-center align-items-center">
-        Loading...{" "}
-        <div class="spinner-grow text-primary" role="status">
-          <span class="visually-hidden">Loading...</span>
+        Authenticating...
+        <div className="spinner-grow text-primary" role="status">
+          <span className="visually-hidden">Loading...</span>
         </div>
-        <div class="spinner-grow text-secondary" role="status">
-          <span class="visually-hidden">Loading...</span>
+        <div className="spinner-grow text-secondary" role="status">
+          <span className="visually-hidden">Loading...</span>
         </div>
-        <div class="spinner-grow text-success" role="status">
-          <span class="visually-hidden">Loading...</span>
+        <div className="spinner-grow text-success" role="status">
+          <span className="visually-hidden">Loading...</span>
         </div>
-        <div class="spinner-grow text-danger" role="status">
-          <span class="visually-hidden">Loading...</span>
+        <div className="spinner-grow text-danger" role="status">
+          <span className="visually-hidden">Loading...</span>
         </div>
       </section>
     );
@@ -130,6 +130,7 @@ const StageTwo = ({ nextStep }) => {
                 <input
                   className="form-control"
                   aria-label="Default select example"
+                  value={values.projectName}
                   placeholder="Project name"
                   id="project"
                   onChange={(e) => {

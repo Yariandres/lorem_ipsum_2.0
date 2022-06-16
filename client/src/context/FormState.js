@@ -9,6 +9,7 @@ const formInitialState = {
   clientID: "",
   password: "",
   category: "",
+  data: []
 };
 
 export const StepFormProvider = function ({ children }) {
@@ -42,6 +43,9 @@ export const StepFormProvider = function ({ children }) {
     dispatch({ type: "SET_CATEGORY", payload: serv });
   };
 
+  const setData = (data) => {
+    dispatch({ type: "SET_DATA", payload: data });
+  }
   return (
     <StepFormContext.Provider
       value={{
@@ -53,6 +57,7 @@ export const StepFormProvider = function ({ children }) {
         setClientPassword,
         setProjectName,
         setCategory,
+        setData
       }}
     >
       {children}
