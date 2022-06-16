@@ -25,7 +25,7 @@ const StageTwo = ({ nextStep }) => {
 
     setTimeout(() => {
       nextStep("categories");
-    }, 2000);
+    }, 2500);
   };
 
   const handleClientIdInputChange = (e) => {
@@ -45,15 +45,20 @@ const StageTwo = ({ nextStep }) => {
 
   if (isAuthenticated) {
     return (
-      <section className="text-center mt-5">
-        <button class="btn btn-primary" type="button" disabled>
-          <span
-            className="spinner-border spinner-border-sm"
-            role="status"
-            aria-hidden="true"
-          >{' '}</span>
-          Loading...
-        </button>
+      <section className="loading_container d-flex justify-content-center align-items-center">
+        Loading...{" "}
+        <div class="spinner-grow text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-secondary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-success" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-danger" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
       </section>
     );
   } else {
