@@ -26,7 +26,7 @@ export const StepFormProvider = function ({ children }) {
     dispatch({ type: "SET_PLATFORM", payload: plat });
   };
 
-  const setClientIDNumber = (num) => {
+  const setClientIdNumber = (num) => {
     dispatch({ type: "SET_CLIENT_ID", payload: num });
   };
 
@@ -49,7 +49,7 @@ export const StepFormProvider = function ({ children }) {
         setNextStep,
         setPrevStep,
         setVendorPlatform,
-        setClientIDNumber,
+        setClientIdNumber,
         setClientPassword,
         setProjectName,
         setCategory,

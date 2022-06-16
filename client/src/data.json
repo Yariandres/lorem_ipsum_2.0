@@ -1,0 +1,602 @@
+{
+    "body": {
+      "limit": 20,
+      "offset": 0,
+      "count": 4,
+      "total": 4,
+      "results": [
+        {
+          "id": "14ec7ebf-0806-4dea-9007-7a393e18c1b0",
+          "version": 29,
+          "lastMessageSequenceNumber": 15,
+          "createdAt": "2022-03-11T09:02:22.383Z",
+          "lastModifiedAt": "2022-05-11T12:35:36.541Z",
+          "lastModifiedBy": {
+            "isPlatformClient": true,
+            "user": {
+              "typeId": "user",
+              "id": "d72df8a8-8b2b-4fa3-8b6e-b686f2585263"
+            }
+          },
+          "createdBy": {
+            "isPlatformClient": true,
+            "user": {
+              "typeId": "user",
+              "id": "3c8c7c28-a6cd-4f8c-8f91-6303ee62f994"
+            }
+          },
+          "productType": {
+            "typeId": "product-type",
+            "id": "19c1a50c-839d-4a21-9c4e-e7f118206f17"
+          },
+          "masterData": {
+            "current": {
+              "name": {
+                "de-DE": "Apple - iPhone 11 256GB - Silver (Sprint)"
+              },
+              "description": {
+                "de-DE": "iPhone 11 features an all-new 12MP camera with an 1.8 aperture for great low-light photos and 4K video. Optical image stabilization. A 4.7-inch Retina HD display with wide color and 3D Touch. An A10 Fusion chip for up to 2x faster performance than iPhone 6. Touch ID."
+              },
+              "categories": [],
+              "categoryOrderHints": {},
+              "slug": {
+                "de-DE": "apple-iphone-11-256gb-silver-sprint"
+              },
+              "metaTitle": {
+                "de-DE": "",
+                "en-US": ""
+              },
+              "metaDescription": {
+                "de-DE": "",
+                "en-US": ""
+              },
+              "masterVariant": {
+                "id": 1,
+                "sku": "0294281819292",
+                "key": "apple-11-key-spirits",
+                "prices": [
+                  {
+                    "id": "6be193ca-4bc3-442a-a75c-d9049c2571e2",
+                    "value": {
+                      "type": "centPrecision",
+                      "currencyCode": "EUR",
+                      "centAmount": 120000,
+                      "fractionDigits": 2
+                    }
+                  }
+                ],
+                "images": [
+                  {
+                    "url": "https://cdn-demo.algolia.com/bestbuy-0118/5580751_sb.jpg",
+                    "dimensions": {
+                      "w": 79,
+                      "h": 160
+                    }
+                  }
+                ],
+                "attributes": [
+                  {
+                    "name": "memory",
+                    "value": 4000
+                  }
+                ],
+                "assets": []
+              },
+              "variants": [],
+              "searchKeywords": {}
+            },
+            "staged": {
+              "name": {
+                "de-DE": "Apple - iPhone 11 256GB - Silver (Sprint)"
+              },
+              "description": {
+                "de-DE": "iPhone 11 features an all-new 12MP camera with an 1.8 aperture for great low-light photos and 4K video. Optical image stabilization. A 4.7-inch Retina HD display with wide color and 3D Touch. An A10 Fusion chip for up to 2x faster performance than iPhone 6. Touch ID."
+              },
+              "categories": [],
+              "categoryOrderHints": {},
+              "slug": {
+                "de-DE": "apple-iphone-11-256gb-silver-sprint"
+              },
+              "metaTitle": {
+                "de-DE": "",
+                "en-US": ""
+              },
+              "metaDescription": {
+                "de-DE": "",
+                "en-US": ""
+              },
+              "masterVariant": {
+                "id": 1,
+                "sku": "0294281819292",
+                "key": "apple-11-key-spirits",
+                "prices": [
+                  {
+                    "id": "6be193ca-4bc3-442a-a75c-d9049c2571e2",
+                    "value": {
+                      "type": "centPrecision",
+                      "currencyCode": "EUR",
+                      "centAmount": 120000,
+                      "fractionDigits": 2
+                    }
+                  }
+                ],
+                "images": [
+                  {
+                    "url": "https://cdn-demo.algolia.com/bestbuy-0118/5580751_sb.jpg",
+                    "dimensions": {
+                      "w": 79,
+                      "h": 160
+                    }
+                  }
+                ],
+                "attributes": [
+                  {
+                    "name": "memory",
+                    "value": 4000
+                  }
+                ],
+                "assets": []
+              },
+              "variants": [],
+              "searchKeywords": {}
+            },
+            "published": true,
+            "hasStagedChanges": false
+          },
+          "taxCategory": {
+            "typeId": "tax-category",
+            "id": "3af16bc7-de67-4cd5-9d19-daa24ab47604"
+          },
+          "lastVariantId": 1
+        },
+        {
+          "id": "6c9049d9-32fc-43f9-be98-70653d51315e",
+          "version": 23,
+          "lastMessageSequenceNumber": 11,
+          "createdAt": "2022-03-11T09:31:32.208Z",
+          "lastModifiedAt": "2022-05-11T13:22:52.381Z",
+          "lastModifiedBy": {
+            "isPlatformClient": true,
+            "user": {
+              "typeId": "user",
+              "id": "3c8c7c28-a6cd-4f8c-8f91-6303ee62f994"
+            }
+          },
+          "createdBy": {
+            "isPlatformClient": true,
+            "user": {
+              "typeId": "user",
+              "id": "3c8c7c28-a6cd-4f8c-8f91-6303ee62f994"
+            }
+          },
+          "productType": {
+            "typeId": "product-type",
+            "id": "86e4c05b-2fcf-49ef-83f7-405213b1f081"
+          },
+          "masterData": {
+            "current": {
+              "name": {
+                "de-DE": "Burton Instigator Snowboard. Test update "
+              },
+              "description": {
+                "de-DE": "If you´re looking for your first snowboard, the decision should be unanimous: the Burton Instigator Flat Top. This efficient and innovative board is ideal for riders who want an easy-going...."
+              },
+              "categories": [],
+              "categoryOrderHints": {},
+              "slug": {
+                "de-DE": "burton-instigator-snowboard"
+              },
+              "metaTitle": {
+                "de-DE": "",
+                "en-US": ""
+              },
+              "metaDescription": {
+                "de-DE": "",
+                "en-US": ""
+              },
+              "masterVariant": {
+                "id": 1,
+                "sku": "858926471811003",
+                "prices": [
+                  {
+                    "id": "b6dde5d4-cd78-42ae-b1dc-f03e37892f3b",
+                    "value": {
+                      "type": "centPrecision",
+                      "currencyCode": "EUR",
+                      "centAmount": 35000,
+                      "fractionDigits": 2
+                    }
+                  }
+                ],
+                "images": [
+                  {
+                    "url": "https://2444c8eca5810db0e1ad-1e5981083cb0cd7e46324921219e330a.ssl.cf3.rackcdn.com/burton-instigator-sn-tVabOJwq.jpg",
+                    "dimensions": {
+                      "w": 1000,
+                      "h": 1000
+                    }
+                  }
+                ],
+                "attributes": [],
+                "assets": []
+              },
+              "variants": [],
+              "searchKeywords": {}
+            },
+            "staged": {
+              "name": {
+                "de-DE": "Burton Instigator Snowboard. Test update "
+              },
+              "description": {
+                "de-DE": "If you´re looking for your first snowboard, the decision should be unanimous: the Burton Instigator Flat Top. This efficient and innovative board is ideal for riders who want an easy-going...."
+              },
+              "categories": [],
+              "categoryOrderHints": {},
+              "slug": {
+                "de-DE": "burton-instigator-snowboard"
+              },
+              "metaTitle": {
+                "de-DE": "",
+                "en-US": ""
+              },
+              "metaDescription": {
+                "de-DE": "",
+                "en-US": ""
+              },
+              "masterVariant": {
+                "id": 1,
+                "sku": "858926471811003",
+                "prices": [
+                  {
+                    "id": "b6dde5d4-cd78-42ae-b1dc-f03e37892f3b",
+                    "value": {
+                      "type": "centPrecision",
+                      "currencyCode": "EUR",
+                      "centAmount": 35000,
+                      "fractionDigits": 2
+                    }
+                  }
+                ],
+                "images": [
+                  {
+                    "url": "https://2444c8eca5810db0e1ad-1e5981083cb0cd7e46324921219e330a.ssl.cf3.rackcdn.com/burton-instigator-sn-tVabOJwq.jpg",
+                    "dimensions": {
+                      "w": 1000,
+                      "h": 1000
+                    }
+                  }
+                ],
+                "attributes": [],
+                "assets": []
+              },
+              "variants": [],
+              "searchKeywords": {}
+            },
+            "published": true,
+            "hasStagedChanges": false
+          },
+          "taxCategory": {
+            "typeId": "tax-category",
+            "id": "3af16bc7-de67-4cd5-9d19-daa24ab47604"
+          },
+          "lastVariantId": 1
+        },
+        {
+          "id": "b0d8ac73-7667-4b5d-af29-cb921187fe5f",
+          "version": 152,
+          "lastMessageSequenceNumber": 51,
+          "createdAt": "2022-04-27T19:08:35.531Z",
+          "lastModifiedAt": "2022-05-26T10:44:15.448Z",
+          "lastModifiedBy": {
+            "clientId": "XjCiX6QHkTIzvc9ndJktHHQK",
+            "isPlatformClient": false
+          },
+          "createdBy": {
+            "isPlatformClient": true,
+            "user": {
+              "typeId": "user",
+              "id": "d72df8a8-8b2b-4fa3-8b6e-b686f2585263"
+            }
+          },
+          "productType": {
+            "typeId": "product-type",
+            "id": "dadecd5c-6289-4070-9fce-2e99a1781660"
+          },
+          "masterData": {
+            "current": {
+              "name": {
+                "de-DE": "Samsung - Galaxy S6 4G with 256GB Memory",
+                "en-US": "Samsung - Galaxy S6 4G with 256GB Memory"
+              },
+              "description": {
+                "de-DE": "[de-DE] Samsung Galaxy S6 edge Unlocked Cell Phone: Access e-mail, social media and more, whether you're at home or on the go, with this cell phone's 4G speed and Wi-Fi. You can control functions simply by speaking using S-Voice natural language commands and dictation"
+              },
+              "categories": [
+                {
+                  "typeId": "category",
+                  "id": "e445f73e-e0dd-4f8f-841f-30146d754448"
+                }
+              ],
+              "categoryOrderHints": {},
+              "slug": {
+                "de-DE": "samsung-galaxy-s6-4g-with-256gb-memory",
+                "en-US": "samsung-galaxy-s6-4g-with-256gb-memory"
+              },
+              "metaTitle": {
+                "de-DE": "",
+                "en-US": ""
+              },
+              "metaDescription": {
+                "de-DE": "",
+                "en-US": ""
+              },
+              "masterVariant": {
+                "id": 1,
+                "sku": "SKU-SAM",
+                "key": "SAM1",
+                "prices": [
+                  {
+                    "id": "19795ac4-5ebb-497d-81e0-a2f18871d8d0",
+                    "value": {
+                      "type": "centPrecision",
+                      "currencyCode": "USD",
+                      "centAmount": 49900,
+                      "fractionDigits": 2
+                    }
+                  }
+                ],
+                "images": [
+                  {
+                    "url": "https://cdn-demo.algolia.com/bestbuy-0118/6670148_sb.jpg",
+                    "dimensions": {
+                      "w": 79,
+                      "h": 160
+                    }
+                  }
+                ],
+                "attributes": [
+                  {
+                    "name": "attr1",
+                    "value": "Black as a night without moon"
+                  }
+                ],
+                "assets": [],
+                "availability": {
+                  "isOnStock": true,
+                  "restockableInDays": 5,
+                  "availableQuantity": 10,
+                  "version": 1,
+                  "id": "0cc0df8e-dae1-4026-a9ad-097cf3bba3d0"
+                }
+              },
+              "variants": [],
+              "searchKeywords": {}
+            },
+            "staged": {
+              "name": {
+                "de-DE": "Samsung - Galaxy S6 4G with 256GB Memory",
+                "en-US": "Samsung - Galaxy S6 4G with 256GB Memory"
+              },
+              "description": {
+                "de-DE": "[de-DE] Samsung Galaxy S6 edge Unlocked Cell Phone: Access e-mail, social media and more, whether you're at home or on the go, with this cell phone's 4G speed and Wi-Fi. You can control functions simply by speaking using S-Voice natural language commands and dictation"
+              },
+              "categories": [
+                {
+                  "typeId": "category",
+                  "id": "e445f73e-e0dd-4f8f-841f-30146d754448"
+                }
+              ],
+              "categoryOrderHints": {},
+              "slug": {
+                "de-DE": "samsung-galaxy-s6-4g-with-256gb-memory",
+                "en-US": "samsung-galaxy-s6-4g-with-256gb-memory"
+              },
+              "metaTitle": {
+                "de-DE": "",
+                "en-US": ""
+              },
+              "metaDescription": {
+                "de-DE": "",
+                "en-US": ""
+              },
+              "masterVariant": {
+                "id": 1,
+                "sku": "SKU-SAM",
+                "key": "SAM1",
+                "prices": [
+                  {
+                    "id": "19795ac4-5ebb-497d-81e0-a2f18871d8d0",
+                    "value": {
+                      "type": "centPrecision",
+                      "currencyCode": "USD",
+                      "centAmount": 49900,
+                      "fractionDigits": 2
+                    }
+                  }
+                ],
+                "images": [
+                  {
+                    "url": "https://cdn-demo.algolia.com/bestbuy-0118/6670148_sb.jpg",
+                    "dimensions": {
+                      "w": 79,
+                      "h": 160
+                    }
+                  }
+                ],
+                "attributes": [
+                  {
+                    "name": "attr1",
+                    "value": "Black as a night without moon"
+                  }
+                ],
+                "assets": [],
+                "availability": {
+                  "isOnStock": true,
+                  "restockableInDays": 5,
+                  "availableQuantity": 10,
+                  "version": 1,
+                  "id": "0cc0df8e-dae1-4026-a9ad-097cf3bba3d0"
+                }
+              },
+              "variants": [],
+              "searchKeywords": {}
+            },
+            "published": true,
+            "hasStagedChanges": false
+          },
+          "key": "Test-41",
+          "taxCategory": {
+            "typeId": "tax-category",
+            "id": "3af16bc7-de67-4cd5-9d19-daa24ab47604"
+          },
+          "lastVariantId": 1
+        },
+        {
+          "id": "b15f8c69-75f2-465d-9323-c41160c7f8db",
+          "version": 9,
+          "lastMessageSequenceNumber": 5,
+          "createdAt": "2022-05-11T11:27:18.298Z",
+          "lastModifiedAt": "2022-05-11T13:45:46.872Z",
+          "lastModifiedBy": {
+            "isPlatformClient": true
+          },
+          "createdBy": {
+            "isPlatformClient": true,
+            "user": {
+              "typeId": "user",
+              "id": "3c8c7c28-a6cd-4f8c-8f91-6303ee62f994"
+            }
+          },
+          "productType": {
+            "typeId": "product-type",
+            "id": "dadecd5c-6289-4070-9fce-2e99a1781660"
+          },
+          "masterData": {
+            "current": {
+              "name": {
+                "de-DE": "Samsung Galaxy S22 Ultra 12/512  test",
+                "en-US": "Samsung Galaxy S22 Ultra 12/512 "
+              },
+              "description": {
+                "de-DE": "Screen (6.8 \", Dynamic AMOLED 2X, 3088x1440) /\nSamsung Exynos 2200 (2.8 GHz + 2.5 GHz + 1.8 GHz) / \nmain quad camera: 108 MP + 12 MP + 10 MP + 10 MP, front 40 MP / \nRAM 12 GB / 512 GB of built-in memory / 3G / LTE / 5G / GPS / support for 2 SIM-cards (Nano-SIM) / Android 12/5000 mAh"
+              },
+              "categories": [],
+              "categoryOrderHints": {},
+              "slug": {
+                "de-DE": "samsung-galaxy-s22-ultra-12512",
+                "en-US": "samsung-galaxy-s22-ultra-12512"
+              },
+              "metaTitle": {
+                "de-DE": "",
+                "en-US": ""
+              },
+              "metaDescription": {
+                "de-DE": "",
+                "en-US": ""
+              },
+              "masterVariant": {
+                "id": 1,
+                "sku": "4939101922-1-30248484",
+                "key": "sumsung-key-01",
+                "prices": [
+                  {
+                    "id": "92ad6efd-0ee6-46fb-ad3b-df43e338091d",
+                    "value": {
+                      "type": "centPrecision",
+                      "currencyCode": "EUR",
+                      "centAmount": 10000,
+                      "fractionDigits": 2
+                    }
+                  }
+                ],
+                "images": [
+                  {
+                    "url": "https://2444c8eca5810db0e1ad-1e5981083cb0cd7e46324921219e330a.ssl.cf3.rackcdn.com/253281530-njiq_Iq7.jpg",
+                    "dimensions": {
+                      "w": 617,
+                      "h": 630
+                    }
+                  }
+                ],
+                "attributes": [
+                  {
+                    "name": "attr1",
+                    "value": "black"
+                  }
+                ],
+                "assets": []
+              },
+              "variants": [],
+              "searchKeywords": {}
+            },
+            "staged": {
+              "name": {
+                "de-DE": "Samsung Galaxy S22 Ultra 12/512  test",
+                "en-US": "Samsung Galaxy S22 Ultra 12/512 "
+              },
+              "description": {
+                "de-DE": "Screen (6.8 \", Dynamic AMOLED 2X, 3088x1440) /\nSamsung Exynos 2200 (2.8 GHz + 2.5 GHz + 1.8 GHz) / \nmain quad camera: 108 MP + 12 MP + 10 MP + 10 MP, front 40 MP / \nRAM 12 GB / 512 GB of built-in memory / 3G / LTE / 5G / GPS / support for 2 SIM-cards (Nano-SIM) / Android 12/5000 mAh"
+              },
+              "categories": [],
+              "categoryOrderHints": {},
+              "slug": {
+                "de-DE": "samsung-galaxy-s22-ultra-12512",
+                "en-US": "samsung-galaxy-s22-ultra-12512"
+              },
+              "metaTitle": {
+                "de-DE": "",
+                "en-US": ""
+              },
+              "metaDescription": {
+                "de-DE": "",
+                "en-US": ""
+              },
+              "masterVariant": {
+                "id": 1,
+                "sku": "4939101922-1-30248484",
+                "key": "sumsung-key-01",
+                "prices": [
+                  {
+                    "id": "92ad6efd-0ee6-46fb-ad3b-df43e338091d",
+                    "value": {
+                      "type": "centPrecision",
+                      "currencyCode": "EUR",
+                      "centAmount": 10000,
+                      "fractionDigits": 2
+                    }
+                  }
+                ],
+                "images": [
+                  {
+                    "url": "https://2444c8eca5810db0e1ad-1e5981083cb0cd7e46324921219e330a.ssl.cf3.rackcdn.com/253281530-njiq_Iq7.jpg",
+                    "dimensions": {
+                      "w": 617,
+                      "h": 630
+                    }
+                  }
+                ],
+                "attributes": [
+                  {
+                    "name": "attr1",
+                    "value": "black"
+                  }
+                ],
+                "assets": []
+              },
+              "variants": [],
+              "searchKeywords": {}
+            },
+            "published": true,
+            "hasStagedChanges": false
+          },
+          "key": "sumsung-ultra-22",
+          "taxCategory": {
+            "typeId": "tax-category",
+            "id": "3af16bc7-de67-4cd5-9d19-daa24ab47604"
+          },
+          "lastVariantId": 1
+        }
+      ]
+    },
+    "statusCode": 200
+  }

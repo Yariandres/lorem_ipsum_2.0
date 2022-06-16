@@ -2,9 +2,14 @@ import { useState, useContext } from "react";
 import { StepFormContext } from "context/FormState";
 import LoremSvg from "../../../assets/svg/LoremLogo.js";
 import DashboardIcon from "../../../assets/svg/DashboardIcon.js";
+import axios from "axios";
+import useFetch from "../../../hooks/useFetch";
 
 const StageThree = ({ nextStep, filteredCategories }) => {
   const [option, setOption] = useState("");
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const { setCategory } = useContext(StepFormContext);
 
   const setGenerateOption = (e) => {
@@ -20,8 +25,46 @@ const StageThree = ({ nextStep, filteredCategories }) => {
     // }
   };
 
+  const fetchData = () => {
+    const reqBody = {
+      credentials: {
+        appId: "LVExBCEKWGKAqVjJ3sVpZW9h",
+        clientSecret: "Ae-8CUB2QkGnBm_YpqpJxR8UYymJIcmq",
+        projectKey: "vma-test",
+      },
+    };
+
+    const header = {};
+
+    setLoading(true);
+    axios
+      .get(
+        "https://ctp-service-machathon.azurewebsites.net/api/ctpHttpTrigger",
+        {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, OPTIONS",
+          },
+          body: JSON.stringify(reqBody),
+          withCredentials: true,
+          credentials: "same-origin",
+        }
+      )
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        setError(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
   return (
     <div>
+      {data && console.log(data)}
       <section className="logo_hero_section_three text-center container">
         <LoremSvg fill="#619E70" />
         <h5 className="logo_text text-success mt-3">Lorem Ipsum 2.0</h5>
@@ -108,7 +151,8 @@ const StageThree = ({ nextStep, filteredCategories }) => {
             disabled={!option}
             type="submit"
             className="btn btn-success btn-lg form_button"
-            onClick={() => nextStep(option)}
+            // onClick={() => nextStep(option)}
+            onClick={() => fetchData()}
           >
             Generate
           </button>
